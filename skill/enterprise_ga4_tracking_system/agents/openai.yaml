@@ -1,0 +1,4 @@
+interface:
+  display_name: "Enterprise GA4 Journey Tracking"
+  short_description: "设计并同步端到端链路的六表 GA4 埋点标准"
+  default_prompt: "Use $enterprise_ga4_tracking_system to create an end-to-end XXX 链路用户分析埋点方案 and synchronize the linked 00–05 tracking artifacts."
