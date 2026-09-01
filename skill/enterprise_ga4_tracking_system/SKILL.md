@@ -9,6 +9,14 @@ description: Build enterprise-grade GA4 app analytics standards and reusable end
 
 Use this skill to create, review, or iterate enterprise-grade GA4 tracking specifications for app journeys.
 
+## Daily Version Check
+
+At the start of each invocation, run `scripts/check_update.sh`. The script checks GitHub at most once every 24 hours and otherwise reuses its local cache.
+
+- `UPDATE_AVAILABLE`: briefly tell the user the current and latest versions and offer `$enterprise-ga4-skill-manager` as the safe update path. Do not update without the user's confirmation, and do not block the current analytics task if they defer.
+- `UP_TO_DATE` or `CHECK_SKIPPED`: continue silently.
+- `CHECK_FAILED`: continue with the installed version and do not treat network failure as a task blocker.
+
 The standard defines analytics specification, not business implementation. Prefer updating existing requirement, parameter, and KPI tables instead of recreating them.
 
 ## Standard Outputs

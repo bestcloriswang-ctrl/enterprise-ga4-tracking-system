@@ -13,6 +13,7 @@ required_files=(
   "${SKILL_ROOT}/references/journey-analysis-plan.md"
   "${SKILL_ROOT}/references/kpi-driven-funnel.md"
   "${SKILL_ROOT}/VERSION"
+  "${SKILL_ROOT}/scripts/check_update.sh"
   "${REPO_ROOT}/skill/enterprise-ga4-skill-manager/SKILL.md"
   "${REPO_ROOT}/skill/enterprise-ga4-skill-manager/VERSION"
   "${REPO_ROOT}/skill/enterprise-ga4-skill-manager/scripts/manage.sh"
@@ -50,5 +51,6 @@ for shell_file in "${SCRIPT_DIR}"/*.sh; do
   bash -n "${shell_file}"
 done
 bash -n "${REPO_ROOT}/skill/enterprise-ga4-skill-manager/scripts/manage.sh"
+bash -n "${SKILL_ROOT}/scripts/check_update.sh"
 
 echo "Validation passed: enterprise_ga4_tracking_system v${version}"
