@@ -18,3 +18,17 @@ rm -f "${DIST_DIR}/${PACKAGE_NAME}"
 )
 
 echo "Package created: ${DIST_DIR}/${PACKAGE_NAME}"
+(
+  cd "${DIST_DIR}"
+  shasum -a 256 "${PACKAGE_NAME}" > "${PACKAGE_NAME}.sha256"
+)
+echo "Checksum created: ${DIST_DIR}/${PACKAGE_NAME}.sha256"
+
+MANAGER_PACKAGE="enterprise-ga4-skill-manager-v1.0.0.zip"
+rm -f "${DIST_DIR}/${MANAGER_PACKAGE}"
+(
+  cd "${REPO_ROOT}/skill"
+  zip -r "${DIST_DIR}/${MANAGER_PACKAGE}" enterprise-ga4-skill-manager \
+    -x '*/.DS_Store' '*/__pycache__/*' '*.pyc'
+)
+echo "Manager package created: ${DIST_DIR}/${MANAGER_PACKAGE}"

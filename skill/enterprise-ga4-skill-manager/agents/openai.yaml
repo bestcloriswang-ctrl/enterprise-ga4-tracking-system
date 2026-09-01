@@ -1,0 +1,4 @@
+interface:
+  display_name: "Enterprise GA4 Skill Manager"
+  short_description: "Install and update the enterprise GA4 Skill"
+  default_prompt: "Check the installed enterprise GA4 tracking Skill and update it safely when needed."

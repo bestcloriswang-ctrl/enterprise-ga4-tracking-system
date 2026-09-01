@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.0 - 2026-09-01
+
+- 新增独立的 `enterprise-ga4-skill-manager`。
+- 支持公开 GitHub Release 安装、版本检查、更新与本地回退。
+- 下载版本化安装包后校验 SHA-256，再替换当前 Skill。
+- 为受管 Skill 增加 `VERSION` 文件。
+
 ## 1.0.0 - 2026-09-01
 
 - 发布企业级 GA4 六表治理 Skill。

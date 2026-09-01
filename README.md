@@ -6,6 +6,7 @@
 
 ```text
 skill/enterprise_ga4_tracking_system/  Skill 正文与 references
+skill/enterprise-ga4-skill-manager/    给同事使用的安装与更新管理器
 scripts/install.sh                     安装当前仓库版本
 scripts/update.sh                      拉取 Git 更新并重新安装
 scripts/version.sh                     查看或设置版本号
@@ -63,6 +64,12 @@ git push origin main --tags
 ```
 
 发布包生成在 `dist/enterprise_ga4_tracking_system-v<version>.zip`。
+
+## 给同事使用 Skill 管理器
+
+同事首次安装 `enterprise-ga4-skill-manager` 后，可以直接在 Codex 中要求安装、检查版本、更新或回退企业 GA4 埋点 Skill。
+
+管理器从本仓库最新 GitHub Release 下载受管 Skill，校验 SHA-256，并在替换前备份旧版本。仓库公开后，安装和更新均不需要 GitHub 登录或仓库权限。
 
 ## 协作约定
 
